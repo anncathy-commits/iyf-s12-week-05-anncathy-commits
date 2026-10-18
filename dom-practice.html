@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        .highlight { background-color: yellow; }
+        .container { padding: 20px; border: 1px solid #ccc; }
+        .hidden { display: none; }
+        .accent { color: #8e2a5b; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>My DOM Page</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="https://developer.mozilla.org" class="nav-link">Cloned</a></li>
+                <li><a href="_blank" class="nav-link">Blog</a></li>
+                <li><a href="noopener" class="nav-link">Portfolio</a></li>  
+            </ul>
+        </nav>
+        <text>
+            {
+            <li><a class="nav-link" href=…>text</a></li>
+            }
+        </text>
+        <blog>
+            {
+            <li><a class="nav-link" href=…>blog</a></li>
+            }
+        </blog>
+        <portfolio>
+            {
+            <li><a class="nav-link" href=…>portfolio</a></li>
+            }
+        </portfolio>
+    </header>
+
+    <main class="container">
+        <article data-id="42" data-category="tech">
+            <h2 class="title">Article Title</h2>
+            <p class="content">Just before the first paragraph.</p>
+            <p class="content">This is the first paragraph.</p>
+            <p class="content">This is the second paragraph.</p>
+        </article>
+
+        <section>
+            <h2>Form Section</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Amina">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@gmail.com">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="injection-demo">
+            <h2>const userInput = `<img src="x" onerror="alert('alert!')"></h2>
+            <div id="harzard"></div>
+            <div id="safe"></div>
+        </section>
+    </main>
+
+    <script src="dom.js"></script>
+</body>
+</html>
