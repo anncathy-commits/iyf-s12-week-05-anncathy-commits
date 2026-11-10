@@ -30,12 +30,11 @@ console.log(emailInput);
 const navItems = document.querySelectorAll("nav li");
 console.log(navItems);
 // TODO 6  the first .nav-link
-const firstNavLink = document.querySelector(".nav-link");
+const firstNavlink = document.querySelector("nav-link");
 // TODO 7  the last paragraph in the article   (hint: p:last-of-type)
 const lastParagraph = document.querySelector("article p:last-of-type");
 console.log(lastParagraph);
 // TODO 8–10  three more of your own — e.g. the submit button, every h2 in main, the footer//
-button, the first section, the last nav item, etc. Log each one.
 const submitButton = document.querySelector("#contact-form button[type='submit']");
 console.log(submitButton);
 
@@ -110,8 +109,11 @@ secondContentParagraph.classList.toggle("accent");
 
 // TODO 5  THE INJECTION DEMO — run these two lines and watch:
 //   const userInput = `<img src="x" onerror="alert('alert!')">`;
+const userInput = `<img src="x" onerror="alert('alert!')">`
 //   document.getElementById("harzard").innerHTML = userInput;   // what happens?
+document.getElementById("Harzard").innerHTML = userInput;
 //   document.getElementById("safe").textContent = userInput;   // and now?
+document.getElementById("safe").textContent = userInput;
 //   Write one sentence in a comment: which one would you use for a user's comment, and why?
 
 
@@ -123,8 +125,18 @@ secondContentParagraph.classList.toggle("accent");
 // function addNavItem(text, href) { }
 // addNavItem("Blog", "#blog");
 // addNavItem("Portfolio", "#portfolio");
+function addNavItem(text,href) {
+    <li><a class="nav-link" href="...">text</a></li>
+}
+function addNavItem(Blog, href) {
+    <li><a class="nav-link" href="#blog">Blog</a></li>
+}
+function addNavItem(Portfolio, href) {
+    <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+}
 //
 // TODO 2  create a paragraph and insert it BEFORE the article's first paragraph
+<p class="content">Just before the first paragraph.</p>
 // TODO 3  clone the first nav li (deep), change its text to "Cloned", prepend it to the list
 // TODO 4  remove the footer
 
