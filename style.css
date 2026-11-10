@@ -1,0 +1,274 @@
+
+/* =================================
+   1. GENERAL PAGE STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1fa;
+    color: #29213d;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* =================================
+   2. MAIN TODO CONTAINER
+================================= */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(50, 30, 80, 0.08);
+}
+
+/* =================================
+   3. HEADINGS
+================================= */
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #39275e;
+}
+
+p {
+    color: #81798e;
+    margin-bottom: 20px;
+}
+
+/* =================================
+   4. FORM AND INPUT
+================================= */
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ddd5eb;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#todo-input:focus {
+    border-color: #8055c7;
+    box-shadow: 0 0 0 3px rgba(128, 85, 199, 0.12);
+}
+
+#todo-form button {
+    background: #8055c7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#todo-form button:hover {
+    background: #6840a9;
+}
+
+/* =================================
+   5. ERROR MESSAGE
+================================= */
+
+#form-error {
+    color: #dc3545;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* =================================
+   6. FILTER BUTTONS
+================================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #f0ebf8;
+    color: #654c8c;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter:hover {
+    background: #e2d7f2;
+}
+
+.filter.active {
+    background: #8055c7;
+    color: white;
+}
+
+/* =================================
+   7. TODO LIST
+================================= */
+
+#todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #faf9fc;
+    border: 1px solid #eee9f5;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.todo-item:hover {
+    background: #f3eff9;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   8. CHECKBOX
+================================= */
+
+.toggle {
+    width: 18px;
+    height: 18px;
+    accent-color: #8055c7;
+    cursor: pointer;
+}
+
+/* =================================
+   9. TODO TEXT
+================================= */
+
+.todo-text {
+    flex: 1;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Completed task */
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #aaa2b4;
+}
+
+/* =================================
+   10. DELETE BUTTON
+================================= */
+
+.delete {
+    background: #ffe9eb;
+    color: #d93648;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    background: #d93648;
+    color: white;
+}
+
+/* =================================
+   11. EDIT INPUT
+================================= */
+
+.edit {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #8055c7;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+/* =================================
+   12. TASK STATISTICS
+================================= */
+
+#items-left {
+    color: #8055c7;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =================================
+   13. CLEAR COMPLETED BUTTON
+================================= */
+
+#clear-completed {
+    background: transparent;
+    color: #8055c7;
+    border: 1px solid #8055c7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-completed:hover {
+    background: #8055c7;
+    color: white;
+}
+
+/* =================================
+   14. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    #todo-form button {
+        width: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+}
