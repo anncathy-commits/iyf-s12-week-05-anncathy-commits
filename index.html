@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,78 +9,153 @@
 </head>
 <body>
     <main class="container">
+
         <h1>My To-Do List</h1>
 
+        <!-- Add Task Form -->
         <form id="todo-form">
-            <label for="todo-input" class="visually-hidden">New task</label>
-             <input type="checkbox" class="toggle">  (checked if completed)
-            <input type="text" id="todo-input" placeholder="What needs to be done?" autocomplete="off">
+            <label for="todo-input" class="visually-hidden">
+                New task
+            </label>
+
+            <input
+                type="text"
+                id="todo-input"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+            >
+
             <button type="submit">Add</button>
-            
         </form>
+
         <p id="form-error" class="form-error" role="alert"></p>
 
-        <nav class="filters" role="group" aria-label="Show">
-            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
-            <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
-            <button type="button" class="delete" with aria-label="Delete">Delete</button>
-        </nav>
-            <li class="todo-item" data-id="1">
-                <input type="checkbox" class="toggle-complete" aria-label="Mark task as completed">
-                <span class="todo-text">Watch Sunrise</span>
-                <button type="button" class="delete">X</button> <a aria-label=`Delete "Watch Sunrise"`></a>
-                <class="edit-controls">
-                    <input type="text" class="edit-input" value="Watch Sunrise" aria-label="Edit task">
-                    <button type="button" class="save">Completed</button>
-            </class>
-        </ul>
-         <ul id="todo-list">
-            <li class="todo-item" data-id="2">
-                <input type="checkbox" class="toggle-complete" aria-label="Mark task as completed">
-                <span class="todo-text">Walk briskly</span>
-                <button type="button" class="delete">X</button> <a aria-label=`Delete "Walk briskly"`></a>
-                <class="edit-controls">
-                    <input type="text" class="edit-input" value="Walk briskly" aria-label="Edit task">
-                    <button type="button" class="save">Completed</button>
-            </class>
-        </ul>
-   <ul id="todo-list">
-            <li class="todo-item" data-id="3">
-                <input type="checkbox" class="toggle-complete" aria-label="Mark task as completed">
-                <span class="todo-text">Exfoliate</span>
-                <button type="button" class="delete">X</button> <a aria-label=`Delete "Exfoliate"`></a>
-                <class="edit-controls">
-                    <input type="text" class="edit-input" value="Exfoliate" aria-label="Edit task">
-                    <button type="button" class="save">Completed</button>
-            </class>
-        </ul>
-   <ul id="todo-list">
-            <li class="todo-item" data-id="4">
-                <input type="checkbox" class="toggle-complete" aria-label="Mark task as completed">
-                <span class="todo-text">Daily Aerobics</span>
-                <button type="button" class="delete">X</button> <a aria-label=`Delete "Daily Aerobics"`></a>
-                <class="edit-controls">
-                    <input type="text" class="edit-input" value="Daily Aerobics" aria-label="Edit task">
-                    <button type="button" class="save">Completed</button>
-            </class>
-        </ul>
-   <ul id="todo-list">
-            <li class="todo-item" data-id="5">
-                <input type="checkbox" class="toggle-complete" aria-label="Mark task as completed">
-                <span class="todo-text">Daily Topic Research</span>
-                <button type="button" class="delete">X</button> <a aria-label=`Delete "Daily Topic Research"`></a>
-                <class="edit-controls">
-                    <input type="text" class="edit-input" value="Daily Topic Research" aria-label="Edit task">
-                    <button type="button" class="save">Completed</button>
-            </class>
-        </ul>
-        <nav class="stats">
-            <span id="items-left">0 items left</span>
-            <button type="button" id="clear-completed">Clear Completed</button>
+        <!-- Task Filters -->
+        <nav class="filters" aria-label="Task filters">
+
+            <button type="button" class="filter active"
+                data-filter="all" aria-pressed="true">
+                All
+            </button>
+
+            <button type="button" class="filter"
+                data-filter="active" aria-pressed="false">
+                Active
+            </button>
+
+            <button type="button" class="filter"
+                data-filter="completed" aria-pressed="false">
+                Completed
+            </button>
+
         </nav>
 
-        <p class="hint">Click a task to complete it · double-click to edit · Enter saves, Escape cancels</p>
+        <!-- Task List -->
+        <ul id="todo-list">
+
+            <li class="todo-item" data-id="1">
+                <input type="checkbox" class="toggle-complete"
+                    aria-label="Mark Watch Sunrise as completed">
+
+                <span class="todo-text">Watch Sunrise</span>
+
+                <button type="button" class="delete"
+                    aria-label="Delete Watch Sunrise">X</button>
+
+                <div class="edit-controls">
+                    <input type="text" class="edit-input"
+                        value="Watch Sunrise" aria-label="Edit task">
+
+                    <button type="button" class="save">Save</button>
+                </div>
+            </li>
+
+            <li class="todo-item" data-id="2">
+                <input type="checkbox" class="toggle-complete"
+                    aria-label="Mark Walk briskly as completed">
+
+                <span class="todo-text">Walk briskly</span>
+
+                <button type="button" class="delete"
+                    aria-label="Delete Walk briskly">X</button>
+
+                <div class="edit-controls">
+                    <input type="text" class="edit-input"
+                        value="Walk briskly" aria-label="Edit task">
+
+                    <button type="button" class="save">Save</button>
+                </div>
+            </li>
+
+            <li class="todo-item" data-id="3">
+                <input type="checkbox" class="toggle-complete"
+                    aria-label="Mark Exfoliate as completed">
+
+                <span class="todo-text">Exfoliate</span>
+
+                <button type="button" class="delete"
+                    aria-label="Delete Exfoliate">X</button>
+
+                <div class="edit-controls">
+                    <input type="text" class="edit-input"
+                        value="Exfoliate" aria-label="Edit task">
+
+                    <button type="button" class="save">Save</button>
+                </div>
+            </li>
+
+            <li class="todo-item" data-id="4">
+                <input type="checkbox" class="toggle-complete"
+                    aria-label="Mark Daily Aerobics as completed">
+
+                <span class="todo-text">Daily Aerobics</span>
+
+                <button type="button" class="delete"
+                    aria-label="Delete Daily Aerobics">X</button>
+
+                <div class="edit-controls">
+                    <input type="text" class="edit-input"
+                        value="Daily Aerobics" aria-label="Edit task">
+
+                    <button type="button" class="save">Save</button>
+                </div>
+            </li>
+
+            <li class="todo-item" data-id="5">
+                <input type="checkbox" class="toggle-complete"
+                    aria-label="Mark Daily Topic Research as completed">
+
+                <span class="todo-text">Daily Topic Research</span>
+
+                <button type="button" class="delete"
+                    aria-label="Delete Daily Topic Research">X</button>
+
+                <div class="edit-controls">
+                    <input type="text" class="edit-input"
+                        value="Daily Topic Research" aria-label="Edit task">
+
+                    <button type="button" class="save">Save</button>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- Task Statistics -->
+        <nav class="stats" aria-label="Task statistics">
+
+            <span id="items-left">0 items left</span>
+
+            <button type="button" id="clear-completed">
+                Clear Completed
+            </button>
+
+        </nav>
+
+        <p class="hint">
+            Click a task to complete it · double-click to edit ·
+            Enter saves, Escape cancels
+        </p>
+
     </main>
 
     <script src="app.js"></script>
